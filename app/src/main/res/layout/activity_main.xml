@@ -26,7 +26,7 @@
             android:layout_width="173dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="textPersonName|number"
             android:numeric="decimal"
             android:paddingLeft="20dp" />
     </TableRow>
@@ -48,7 +48,7 @@
             android:layout_width="173dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="textPersonName|number"
             android:numeric="decimal"
             android:paddingLeft="20dp" />
     </TableRow>
@@ -70,8 +70,8 @@
             android:layout_width="173dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:numeric="integer"
+            android:inputType="textPersonName|number"
+            android:numeric="integer|decimal"
             android:paddingLeft="20dp" />
     </TableRow>
 
