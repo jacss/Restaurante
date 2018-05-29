@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
     private Button calcularConta;
@@ -25,6 +26,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.nova);
+
+
+
+
 
         consumoTotal = findViewById(R.id.editConsumo_Id);
         courverArtistico = findViewById(R.id.editCouvert_Id);
@@ -48,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
                 double taxa = ((consumo+couver)*10)/100;
                 double contaTotal = consumo+couver;
-               double totalPorPessoa = contaTotal/qtdPessoas;
+                double totalPorPessoa = contaTotal/qtdPessoas;
                 DecimalFormat df = new DecimalFormat("###.##");
 
 

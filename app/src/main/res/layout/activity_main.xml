@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
-            android:text="Consumo total R$:" />
+            android:text="@string/consumo_total" />
 
         <EditText
             android:id="@+id/editConsumo_Id"
@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
-            android:text="Couvert artístico R$:" />
+            android:text="@string/couvert_artitico" />
 
         <EditText
             android:id="@+id/editCouvert_Id"
@@ -63,7 +63,7 @@
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
-            android:text="Dividir conta por:" />
+            android:text="@string/dividido_por" />
 
         <EditText
             android:id="@+id/editDividirPorP_Id"
@@ -93,13 +93,15 @@
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
-            android:text="Taxa de Serviço(10%) R$:" />
+            android:text="@string/taxa_servico" />
 
         <EditText
             android:id="@+id/editTaxa_Id"
             android:layout_width="173dp"
             android:layout_height="wrap_content"
+            android:editable="true"
             android:ems="10"
+            android:enabled="false"
             android:inputType="textPersonName"
             android:numeric="decimal" />
     </TableRow>
@@ -114,13 +116,15 @@
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
-            android:text="Conta total R$:" />
+            android:text="@string/conta_total" />
 
         <EditText
             android:id="@+id/editContaTotal_Id"
             android:layout_width="173dp"
             android:layout_height="wrap_content"
+            android:editable="true"
             android:ems="10"
+            android:enabled="false"
             android:inputType="textPersonName"
             android:numeric="decimal" />
     </TableRow>
@@ -134,21 +138,23 @@
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
-            android:text="Valor por pessoa R$:" />
+            android:text="@string/valor_por_pessoa" />
 
         <EditText
             android:id="@+id/editPorPessoa_Id"
             android:layout_width="173dp"
             android:layout_height="wrap_content"
+            android:editable="true"
             android:ems="10"
+            android:enabled="false"
             android:inputType="textPersonName"
             android:numeric="decimal" />
     </TableRow>
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/balaio" />
+        app:srcCompat="@drawable/balaio_de_lenha" />
 
 </LinearLayout>
