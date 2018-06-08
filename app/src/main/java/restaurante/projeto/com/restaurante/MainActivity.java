@@ -4,8 +4,10 @@ import android.annotation.TargetApi;
 import android.icu.text.DecimalFormat;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,10 +17,10 @@ public class MainActivity extends AppCompatActivity {
     private Button calcularConta;
 
     private EditText consumoTotal;
-    private  EditText courverArtistico;
+    private EditText courverArtistico;
     private EditText quantidadePessoas;
 
-    private  EditText taxaServico;
+    private EditText taxaServico;
     private EditText totalConta;
     private EditText valorPorPessoa;
 
@@ -28,9 +30,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.mipmap.nova);
-
-
-
 
 
         consumoTotal = findViewById(R.id.editConsumo_Id);
@@ -43,19 +42,20 @@ public class MainActivity extends AppCompatActivity {
         valorPorPessoa = findViewById(R.id.editPorPessoa_Id);
 
 
-
         calcularConta.setOnClickListener(new View.OnClickListener() {
             @TargetApi(Build.VERSION_CODES.N)
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View view) {
+
                 double consumo = Double.parseDouble(consumoTotal.getText().toString());
                 double couver = Double.parseDouble(courverArtistico.getText().toString());
-                double qtdPessoas = Double.parseDouble(quantidadePessoas.getText().toString());
+                int qtdPessoas = Integer.parseInt(quantidadePessoas.getText().toString());
 
-                double taxa = ((consumo+couver)*10)/100;
-                double contaTotal = consumo+couver;
-                double totalPorPessoa = contaTotal/qtdPessoas;
+                double taxa = ((consumo + couver) * 10) / 100;
+                double contaTotal = consumo + couver+taxa;
+
+                double totalPorPessoa = contaTotal / qtdPessoas;
                 DecimalFormat df = new DecimalFormat("###.##");
 
 
@@ -64,11 +64,12 @@ public class MainActivity extends AppCompatActivity {
                 valorPorPessoa.setText(String.format(df.format(totalPorPessoa)));
 
 
-
-
             }
         });
 
 
     }
+
+
 }
+
